@@ -125,6 +125,17 @@ Refs: #123
 1. Conventional Commits を構成する情報の単位は、大文字の `BREAKING CHANGE` を除いて、実装は大文字と小文字を区別してはならない (MUST NOT)。
 1. フッターのトークンにおいて `BREAKING-CHANGE` は `BREAKING CHANGE` と同じトークンとして解釈されなければならない (MUST)。
 
+## よくある質問
+
+### Conventional Commits はrevertコミットをどのように扱いますか？
+我々のおすすめの方法としては、ひとつは`revert`型と revertされるコミットの SHA を参照するフッターを使うようにすることです。
+
+```
+revert: let us never again speak of the noodle incident
+
+Refs: 676104e, a215868
+```
+
 ## Git コマンドの実行について
 コミットメッセージを作成するために git show や git diff などのページャーが必要になる可能性があるコマンドを使うとき、これらの出力が長い場合にページャーが起動してしまい、対話的な操作が必要になることがあります。そのため、ページャーが必要になる可能性があるコマンドを実行する際は、以下のようにcatにパイプして出力を一度に表示しなければなりません (MUST)。
 
