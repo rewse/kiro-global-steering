@@ -136,18 +136,6 @@ revert: let us never again speak of the noodle incident
 Refs: 676104e, a215868
 ```
 
-## Git コマンドの実行について
-コミットメッセージを作成するために git show や git diff などのページャーが必要になる可能性があるコマンドを使うとき、これらの出力が長い場合にページャーが起動してしまい、対話的な操作が必要になることがあります。そのため、ページャーが必要になる可能性があるコマンドを実行する際は、以下のようにcatにパイプして出力を一度に表示しなければなりません (MUST)。
-
-```bash
-git diff | cat
-git log --oneline | cat
-git show | cat
-git status | cat
-```
-
-これにより、ページャーを使わずに全ての出力を一度に確認できます。
-
 ## ライセンス
 この文書は [Conventional Commits 1.0.0](https://www.conventionalcommits.org/ja/v1.0.0/) 仕様を基に作成されており、元の仕様は [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/) の下でライセンスされています。
 
